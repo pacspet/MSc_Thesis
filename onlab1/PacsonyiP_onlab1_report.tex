@@ -1,0 +1,240 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{FRT}
+
+
+% These commands must be edited
+\newcommand{\TITLE}{Parameter identification of a Formula Student race car}
+\newcommand{\SUBTITLE}{System Documentation}
+\newcommand{\NAME}{Péter PÁCSONYI}
+\newcommand{\DATE}{2024.02.29.}
+
+
+
+
+
+
+\begin{document}
+    \FRTtitle %Do not touch
+
+\section*{Abbreviations}
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{r l}
+			\textbf{Abbreviation}& \textbf{Description} \\
+			\hline
+			\textbf{EBS}& Emergency Brake System\label{abbr:EBS} \\
+			
+		\end{tabular}
+	\end{table}
+
+\newpage
+
+\section*{Introduction}
+	In the vehicle dynamics control of a Formula Student race car, rather complex methods are used to achieve maximum performance. In many cases, a sufficiently accurate system model is essential for the development of controllers in modern control theory.
+		
+	\subsection*{Problem description}
+		 The quality and quantity parameters needed to be identified in this case are dependent on how sophisticated the given controller is. These parameters can be the aerodynamic properties, the height of the center of mass, values of the used tire model etc. There is also the question of validating different parts of the car. These parameters in some cases do not affect plant model used in the controller, or the performance of these controllers. Nevertheless they are important for proving that the given part or subsystem was designed according to the requirements defined during the concept phase. Examples of this type of parameters can be the friction coefficient between the brake pads and discs, the delay during the activation of the \hyperref[abbr:EBS]{EBS}, etc.
+		
+	\subsection*{General solutions}
+		Examples of existing units with similar functions. Look up products and technologies in different industries.		
+	\subsection*{Competitor analysis}
+		Same as the previous point, except this is for other Formula Student concepts. Take into consideration other team’s designs. Contact alumni from our team who did similar projects, and ask for know-how.
+		
+		Review by Group Leader
+		
+\section*{Requirements}
+	The requirements are divided into two groups. The Vehicle Level Requirements will contain the parameters which are needed to be identified. The System Level Requirements describe the 
+	
+	\subsection*{Vehicle level requirements}
+		Collect requirements from vehicle level, or vehicle level document. Review with Chief Engineer.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\textbf{ID}& \textbf{Description} & \textbf{Prio} \\
+				\hline
+				VL1&  & Criteria \\
+				\hline
+				VL2&  & Demand \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+	\subsection*{System level requirements}
+		Collect requirements from system level, or system level document. Review with Group Leader. This should be the main source of the high level requirements for your project.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\textbf{ID}& \textbf{Description} & \textbf{Prio} \\
+				\hline
+				SL1&  & Demand \\
+				\hline
+				SL2&  & Demand \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+	\subsection*{Unit level requirements}
+		Collect any other requirement affecting your part. These will be high level as well. Try thinking of critical parameters that you should define here, for example stresses, environmental parameters, manufacturability, inputs/outputs etc. Review with Group Leader.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\textbf{ID}& \textbf{Description} & \textbf{Prio} \\
+				\hline
+				UL1&  & Demand \\
+				\hline
+				UL2&  & Wish \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+\section*{Functions}
+	Here you will derive functions from requirements. Reviewed by Group Leader.
+	
+	\subsection*{Function table}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\textbf{Rqmt. ID}& \textbf{Defined function} & \textbf{Function ID} \\
+				\hline
+				SL2&  & FN1 \\
+				\hline
+				UL1&  & FN2 \\
+				\hline
+			\end{tabular}
+		\end{table}
+\section*{Concepts}
+	Look up possible solutions for the defined Functions. Take into account only the requirements with demand priority. Define pros and cons for each. Consider which ones satisfies the requirements best, then mark with green color the selected solution. Reviewed by Group Leader.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|l|}
+			\hline
+			\makecell[l]{\textbf{Function}\\\textbf{ID}}& \multicolumn{2}{l|}{\textbf{Principle 1}} &  \multicolumn{2}{l|}{\textbf{Principle 2}} &\multicolumn{2}{l|}{\textbf{Principle 3}}     \\
+			\hline
+			\multirow{2}{*}{FN1}&  \multicolumn{2}{l|}{Description}  &  &  &  &  \\
+			\cline{2-7}
+			& +pros & -cons &  &  &  &  \\
+			\hline
+			\multirow{2}{*}{FN2}&  \multicolumn{2}{l|}{Description}  &  &  &  &  \\
+			\cline{2-7}
+			& +pros & -cons &  &  &  &  \\
+			\hline
+		\end{tabular}		
+	\end{table}
+	
+	\subsection*{Concepts}
+		Where the pros and cons cannot define a trivial choice, do an analysis for each concept principle.
+	\subsection*{Decision matrices}
+		During concept evaluation, define the critical parameters for the functions, and fill out the decision matrices accordingly. Rate in a scale of 0-10 with 10 being the best concept for the given parameter, and 0 being the worst. Weight factors are defined by Chief Engineer.
+		
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|l|l|}
+				\hline
+				\textbf{Criteria}& \textbf{Weight factor} & \textbf{Concept 1} & \textbf{Concept 2} & \textbf{Concept 3} \\
+				\hline
+				&  &  &  & \\
+				\hline
+				&  &  &  & \\
+				\hline
+				\multirow{2}{*}{Summary}& Point: &  &  &\\
+				\cline{2-5}
+				& Place: &  &  &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+	\section*{Detailed design}
+		\subsection*{Design process}
+			Fill out with project specific step-by-step points. Done by group leader.
+		\subsection*{BOM}
+			Collect all necessary components needed for the assembly and final installation of the unit.
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|l|l|l|}
+					\hline
+					\textbf{Part ID}& \textbf{Part name} & \textbf{Qty.} \\
+					\hline
+					1100-100-01&  &  \\
+					\hline
+					1100-100-02&  &  \\
+					\hline
+					1100-100-03&  &  \\
+					\hline
+				\end{tabular}
+			\end{table}
+	\section*{Manufacturing}
+		Step-by-step write down the manufacturing process of the unit.
+		
+		\subsection*{Required equipment}
+			All necessary equipment needed for the completion of the unit. For example solder, cleaning materials, lubricants etc.
+		\subsection*{Assembly plan}
+			How to assemble the components together for the finished unit, and how to assemble the finished unit into system. Also define assembly specific tooling if needed.
+	\section*{Testing}
+		\subsection*{Test procedures}
+			Here you will define all the test procedures required to validate that all requirements are met.
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|l|l|}
+					\hline
+					\textbf{Test description}& \textbf{Rqmt ID}  \\
+					\hline
+					&  FL2,SL3  \\
+					\hline
+					&    \\
+					\hline				
+				\end{tabular}
+			\end{table}
+		\subsection*{Test plan}
+			If testing and/or validation requires a specific order, set one up. Also consider destructive tests for specific requirements, and define the test order accordingly.
+		\subsection*{Required equipment}
+			All necessary equipment needed for the tests. If destructive tests are need, also list the required parts with part phases.
+		\subsection*{Results}
+			Go through the testing and validation of the unit. Always document any necessary information during testing, for example test setup, measured values, dates, issues and problems etc. Colour mark OK tests with green, and NOk tests with red. If a test failed, write conclusion and solution ideas.
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|l|l|l|l|}
+					\hline
+					\textbf{Step}& \textbf{Expected values} & \textbf{Result (Value, OK/NOK)}&\textbf{Comment}\\
+					\hline
+					&  & & \\
+					\hline
+					&  & & \\
+					\hline				
+				\end{tabular}
+			\end{table}
+			Date: 2024.xx.xx
+			
+			Testers: Gipsz Jakab and Móka Miki
+			
+			Overall conclusion (if applicable): .
+			
+	\section*{Changelog}
+		\subsection*{Changes}
+			If any modification was required during testing, or operation, document all changes of the unit.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|}
+				\hline
+				\textbf{Change Description}& \textbf{Affected function} & \textbf{Reason} \\
+				\hline
+				Drilled bigger hole& FN3, FN6 & Screw proved not strong enough \\
+				\hline
+				&  &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\section*{Appendices}
+		\subsection*{Sources}
+			Standards, articles, websites.
+		\subsection*{Tables}
+			Datasheets, calculators etc.
+		\subsection*{Documents}
+			Vehicle and system level document, other relevant documentations.
+		\subsection*{Other}
+			Links to off the shelf products, etc.
+\end{document}

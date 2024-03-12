@@ -1,0 +1,128 @@
+% BME FRT Documentation template
+% Provided by: Péter Pácsonyi
+
+
+\ProvidesPackage{FRT}
+
+%Basic imports
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[skip=10pt, indent=0pt]{parskip}
+\usepackage{tabularx}				
+\usepackage{amsmath}					
+\usepackage{amssymb}
+\usepackage{array}					
+\usepackage[labelfont=bf]{caption}	
+\usepackage{subcaption}
+\usepackage{titling}
+\usepackage{physics}
+\usepackage{gensymb} 					
+\usepackage{mwe} 					
+\usepackage{bold-extra}
+\usepackage{empheq}						
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{hyperref}				
+\hypersetup{						
+	colorlinks = true,
+	linkbordercolor = {white},
+	allcolors = {black}
+}
+\usepackage[capitalize]{cleveref}
+\usepackage{float}
+\usepackage{appendix}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+%Color definitions according to brand guidelines
+
+\definecolor{FRTred}{RGB}{214,10,38}
+\definecolor{FRTgray}{HTML}{6C6463}
+
+\definecolor{MECHgray}{HTML}{4E4E4E}
+\definecolor{CHASSISpink}{HTML}{F50A75}
+\definecolor{ELECTROgreen}{HTML}{257226}
+\definecolor{TSpurple}{HTML}{7B00C4}
+\definecolor{VDCorange}{HTML}{ED9B33}
+\definecolor{DVblue}{HTML}{1013AE}
+\definecolor{AEROblue}{HTML}{5B9BF1}
+\definecolor{OPERATIVEburgundy}{HTML}{A64570}
+\definecolor{SPONSORINGgreen}{HTML}{0F6C6F}
+
+
+
+
+
+%Custom headers and footers
+\newcommand{\titlehead}{%
+	\begin{tikzpicture}[remember picture, overlay]
+		\filldraw[draw=FRTred, fill=FRTred] (current page.north east)--([yshift=-19.7mm]current page.north east)--([yshift=-37.8mm]current page.north west)--(current page.north west) -- cycle;
+		\filldraw[draw=black, fill=black] (current page.north west)--([yshift=-19.7mm]current page.north west)--([yshift=-37.8mm]current page.north east)--(current page.north east) -- cycle;		
+	\end{tikzpicture}
+}%
+\newcommand{\titlefoot}{%
+	\begin{tikzpicture}[remember picture, overlay]
+		\filldraw[draw=FRTred, fill=FRTred] (current page.south west)--([yshift=19.7mm]current page.south west)--([yshift=37.8mm]current page.south east)--(current page.south east) -- cycle;
+		\filldraw[draw=black, fill=black] (current page.south east)--([yshift=19.7mm]current page.south east)--([yshift=37.8mm]current page.south west)--(current page.south west) -- cycle;		
+	\end{tikzpicture}
+}%
+\newcommand{\FRThead}{
+	\begin{tikzpicture}[remember picture, overlay]
+		\fill [color=FRTred] (current page.north west) rectangle ([yshift=-11.38mm]current page.north east);
+		\fill [color=black] (current page.north west) rectangle ([yshift=-9.6mm]current page.north east);
+	\end{tikzpicture}
+}
+\newcommand{\FRTfoot}{
+	\begin{tikzpicture}[remember picture, overlay]
+		\fill [color=FRTred] (current page.south west) rectangle ([yshift=18.81mm]current page.south east);
+		\fill [color=black] (current page.south west) rectangle ([yshift=16.49mm]current page.south east);
+		\path([yshift=7.655mm,xshift=47.005mm]current page.south west) node {\includegraphics[height=12.11mm]{FRT_logo_white_text_side_line.png}};
+	\end{tikzpicture}
+}
+
+
+
+
+
+%Page styles
+\fancypagestyle{Titlepage}{%
+	\fancyhf{}
+	\fancyhead[C]{\titlehead}
+	\fancyfoot[C]{\titlefoot}
+	\renewcommand{\headrulewidth}{0pt}
+}%
+
+\fancypagestyle{FRTstyle}{
+	\fancyhead[C]{\FRThead}
+	\fancyfoot[C]{\FRTfoot}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{FRTstyle}
+
+
+\titleformat{\section}{\huge\scshape}{}{0pt}{\textcolor{FRTred}{\textbackslash} }
+\titleformat{\subsection}{\Large}{}{0pt}{\textcolor{FRTred}{\rule{\textwidth}{1pt}} \hspace*{1.5cm}}
+
+\newcommand{\FRTtitle}{
+	\begin{titlepage}
+		\thispagestyle{Titlepage}
+		\newgeometry{top=49.8mm}
+		\centering
+		\includegraphics[scale=1.196]{FRT_logo_black_text_middle.pdf}\\
+		\vspace{15.95mm}
+		\fontsize{34pt}{0pt}\selectfont \TITLE\\
+		\vspace{16.02mm}
+		\fontsize{20pt}{0pt}\selectfont	\SUBTITLE\\
+		\vspace{16.41mm}
+		\fontsize{16pt}{0pt}\selectfont	\NAME\\
+		\vspace{6.26mm}
+		\fontsize{14pt}{0pt}\selectfont \DATE
+\end{titlepage}}

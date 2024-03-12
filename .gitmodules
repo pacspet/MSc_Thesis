@@ -1,0 +1,3 @@
+[submodule "Parameter_identification"]
+	path = Parameter_identification
+	url = git@github.com:BME-FRT/Parameter_identification.git
